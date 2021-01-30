@@ -1,0 +1,86 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 2rem;
+    width: 80vw;
+    margin: 0 auto;
+}
+
+/* NAVIGATION HEADER AND FOOTER */
+.navigation {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+
+} 
+
+.navigation ul {
+    display: flex;
+    gap: 6rem;
+}
+
+.navigation li {
+    list-style: none;
+}
+
+.navigation a {
+    color: gray;
+}
+
+/* ----------------------------- */
+
+
+/* HEADER--------------------- */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+    height: 80vh;
+    
+
+    /* QUITAR DISPLAY */
+    /* display: none; */
+} 
+
+header h1 {
+    text-transform: uppercase;
+    font-size: 6rem;
+}
+
+/* ----------------------------- */
+
+
+
+/* SECTIONS --------------------- */
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    height: 50vh;
+    border: solid 1px black;
+}
+
+    
+
+
+
+
+footer {
+    background-color: lightseagreen;
+    height: 20vh;
+}
