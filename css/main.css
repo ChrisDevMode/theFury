@@ -1,7 +1,12 @@
+
+/* VARIABLES ------------------------- */
 :root {
     --primary-color: #0a95c0;
+    --body-background: linear-gradient(to top, #b0fcfca1, #ccf2f8ab);
+    --white: #fff;
 }
 
+/* RESET ------------------------- */
 *,
 *::after,
 *::before {
@@ -12,6 +17,7 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -19,19 +25,19 @@ body {
     line-height: 1.5;
     box-sizing: border-box;
 
-    background-color: #dafcf2ea;
+    background: var(--body-background);
 }
     
 
-
+/* CONTENEDOR PRINCIPAL -------------------- */
 .container {
     display: flex;
     flex-direction: column;
     gap: 4rem;
 }
-    
 
-/* NAVIGATION HEADER AND FOOTER */
+/* NAVEGACIONES ------------------------- */
+/* navegación del header */
 .navigation {
     display: flex;
     justify-content: center;  
@@ -48,7 +54,7 @@ body {
 }
 
 .navigation a {
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
     text-transform: uppercase;
     font-size: 1.6rem;
@@ -59,10 +65,21 @@ body {
     color: #0fd6dd;
 }
 
-/* ----------------------------- */
+
+/* Navegación del footer */
+
+footer .navigation a {
+    color: var(--primary-color);
+    text-shadow: none;
+}
+
+footer .navigation a:hover {
+    color: #75f9fd;
+}
 
 
-/* HEADER--------------------- */
+
+/* HEADER ------------------------- */
 header {
     background-image:   linear-gradient(#0fd6dd88, #b4fde7ab), url(/media/img/header-hero.jpg);
     display: flex;
@@ -73,39 +90,18 @@ header {
     height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
-    
-
-    /* QUITAR DISPLAY */
-    /* display: none; */
 } 
 
 header h1 {
     text-transform: uppercase;
     font-size: 6rem;
-    color: #fff;
+    color: var(--white);
     text-shadow: 0 2px 12px black;
 }
 
-/* ----------------------------- */
+/* SECTIONS ------------------------- */
 
-
-
-/* SECTIONS --------------------- */
-
-
-
-/* section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem;
-    max-width: 80rem;
-    margin: 0 auto;
-    height: 50vh;
-    
-} */
-
+/* Estilos globales */
 section {
     height: 100vh;
     padding: 4rem;
@@ -137,6 +133,7 @@ section p {
     color: #5c5959;
 }
 
+/* Estilos individuales */
 
 section .section__content {
     padding: 2rem;
@@ -145,6 +142,8 @@ section .section__content {
     align-items: center;
     gap: 2rem;
 }
+
+/* Imágenes de los artículos */
 
 section .section__img {
     display: flex;
@@ -162,6 +161,8 @@ section .section__img--2 {
     height: 30rem;
 }
 
+/* Descripciones de los artículos */
+
 section .section__description {
     display: flex;
     flex-direction: column;
@@ -177,8 +178,6 @@ section .section__description small {
 section .section__description small span{
     color: black;
     font-weight: bold;
-    
-    
 }
 
 section .section__description--1 {
@@ -194,6 +193,8 @@ section .section__description small {
 }
 
 
+
+/* SECCIÓN DEL FORMULARIO */
 
 section.form {
     height: 70vh;
@@ -276,7 +277,7 @@ section form div input[type="submit"] {
 }
 section form input[type="submit"]:hover {
     background-color: #0fd6dd;
-    color: #fff;
+    color: var(--white);
     transition: all .5s;
 }
 
@@ -290,7 +291,7 @@ section form .formImg {
 
     
 
-
+/* FOOTER */
 
 
 footer {
@@ -323,14 +324,7 @@ footer > a:hover {
     color: #75f9fd;
 }
 
-footer .navigation a {
-    color: var(--primary-color);
-    text-shadow: none;
-}
 
-footer .navigation a:hover {
-    color: #75f9fd;
-}
 
 
 
