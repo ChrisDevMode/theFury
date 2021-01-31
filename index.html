@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,700;0,900;1,100&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+    <!--  
     <header id="hd">
         <h1>
             ¡Descarga tu furia!
@@ -51,7 +51,9 @@
         </div>
     </section>
 
-    <section class="form">
+    -->
+
+    <section>
         
         <h2>¿Te has desahogado?</h2>
         <p>
@@ -66,31 +68,68 @@
                     <input type="text" name="userName" id="userName">
                 </div>
     
-                <div>
-                    <label for="newSection1">¿Te gustaría que añadiéramos alguna otra sección?</label>
-    
-                    <div class="formAnswer">
-                        <p>Sí</p>
-                        <input type="checkbox" name="newSection" id="newSection1">
-                        <p>No</p>
-                        <input type="checkbox" name="newSection" id="newSection2">
-                    </div>
-    
+                
+                
+                <div class="formAnswer">
+                    <label for="newSection1">¿Te gustaría que añadiéramos <br> alguna otra sección?</label>
+                    <p>Sí</p>
+                    <input type="radio" name="newSection" value="yes" id="newSection1">
+                    <p>No</p>
+                    <input type="radio" name="newSection" value="no" id="newSection2">
                 </div>
     
+                
+    
                 <div>
-                    <label for="createSection">¿Alguna idea?</label>
-                    <input type="text" name="createSection" id="createSection">
+                    <label for="anyIdea">¿Alguna idea?</label>
+                    <input type="text" name="anyIdea" id="anyIdea">
                 </div>
-            </div>
 
+                <div>
+                    <label>¿Como estabas antes?</label>
+                    <input list="moods" name="myMood">
+                    <datalist id="moods">
+                        
+                        <option value="Tranquilo, aunque me ha venido bien">
+                        <option value="ligeramente fastidiado">
+                        <option value="Un poco hasta las pelotas, sinceramente">
+                        <option value="Como si me hubieran puesto los cuernos">
+                        <option value="Cagándome en absolutamente todo, joder">
+    
+                    </datalist>
+                </div>
+
+                <div>
+                    <label>¿Como estás ahora?</label>
+                    <input list="newMoods" name="myNewMood">
+                    <datalist id="newMoods">
+                        
+                        <option value="Sigo jodido, tendré que volver a postear algo">
+                        <option value="Más tranquilo, la verdad">
+                        <option value="Aliviado">
+                        <option value="Reconfortado, volando">
+                        <option value="Soy el hijo de las estrellas y el rey es mi padre">
+    
+                    </datalist>
+
+                </div>
+
+                <div>
+                    <label for="saySomething">Últimas palabras</label>
+                    <textarea name="saySomething" id="saySomething" maxlength="100" placeholder="No más de 100 caracteres, no te flipes"></textarea>
+                </div>
+
+                <input type="submit">
+                
+            </div>
+            
             <div class="formImg">
-                <img src="#" alt="Foto">
+                
             </div>
-
-
+            
+            
         </form>
-
+        
         
     </section>
 
