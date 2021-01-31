@@ -16,7 +16,7 @@
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 75%;
     scroll-behavior: smooth;
 }
 
@@ -116,7 +116,7 @@ section {
 section h2 {
     color: var(--primary-color);
     font-size: 2.5rem;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
     text-transform: uppercase;
     text-align: center;
 }
@@ -198,7 +198,7 @@ section .section__description small {
 
 section.form {
     height: 70vh;
-    margin-bottom: 6rem;
+    margin-bottom: 15rem;
 }
 
 section.form h3 {
@@ -218,6 +218,10 @@ section form {
     align-self: center;
     gap: 4rem;
     
+}
+
+section form label {
+    font-size: 1rem;
 }
 
 section form label, input {
@@ -295,10 +299,10 @@ section form .formImg {
 
 
 footer {
-    padding: 2rem;
-    margin-bottom: 4rem;
-    
+    padding: 6rem;
+    background: #fff;
 }
+    
 
 footer {
     display: flex;
