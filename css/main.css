@@ -16,7 +16,7 @@
 }
 
 html {
-    font-size: 75%;
+    font-size: 0.75em;
     scroll-behavior: smooth;
 }
 
@@ -24,6 +24,7 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     box-sizing: border-box;
+
     background: var(--body-background);
 }
     
@@ -35,76 +36,69 @@ body {
     gap: 4rem;
 }
 
-/* NAVEGACIONES ------------------------- */
-/* navegación del header */
+/* NAVEGACIONES ------------------------- */ 
 
-/*  
-.navigation__main li {
-    text-align: center;
-    list-style: none;
+/* Estilos globales */
+.navigation__header, .navigation__footer {
+    display: flex;
+    justify-content: center;
+    gap: 6rem;
+}  
+
+.navigation__header li, .navigation__footer li {
+    list-style-type: none;
 }
-
-
-.navigation a {
-    color: var(--white);
+    
+.navigation__header a {
     text-decoration: none;
+    font-size: 1.5rem;
     text-transform: uppercase;
-    font-size: 1.6rem;
-    text-shadow: 0 0 4px black;
+    color: var(--white);
+    text-shadow: 0 0 4px #00000099;
 }
 
-.navigation a:hover {
-    color: #0fd6dd;
-}
 
-.navigation__main li a:hover ~ .navigation__sub {
-    opacity: 1;
-    transition: all 1s;
-}
-
-.navigation__sub {
+/* Estilos para la navegación del header */
+.navigation__header--sub {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
-    align-self: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    
+    gap: 1.2rem;
+    text-align: center;
+
     opacity: 0;
 }
 
-.navigation__sub > li {
-    border-bottom: solid 2px var(--white);
-    display: block;
-    width: 20rem;
-    text-align: center;
-}
-
-.navigation__sub li {
+.navigation__header--sub li {
     color: var(--white);
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--white);
     text-transform: uppercase;
+}
     
-}
-*/
-
-.navigation__main li {
-    list-style-type: none;
+.navigation__header li a:hover {
+    text-shadow: 0 0 2px;
+    transition: all .5s ease;
 }
 
-.navigation__main li a {
+.navigation__header li a:focus ~ .navigation__header--sub {
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+
+/* Estilos para la navegación del footer */
+.navigation__footer a {
     text-decoration: none;
-}
-
-/* Navegación del footer */
-
-footer .navigation a {
+    font-size: 1.5rem;
+    text-transform: uppercase;
     color: var(--primary-color);
-    text-shadow: none;
 }
 
-footer .navigation a:hover {
-    color: #75f9fd;
+.navigation__footer a:hover {
+    text-shadow: 0 0 2px;
+    transition: all .5s ease;
 }
-
 
 
 /* HEADER ------------------------- */
@@ -276,6 +270,10 @@ section form .formInputs > div:not(.formSubmitBox) {
     align-items: center;
 }
 
+.formAnswer p {
+    color: var(--primary-color);
+}
+
 section form .formInputs .formAnswer {
     display: flex;
     justify-content: space-between;
@@ -298,17 +296,17 @@ section form .formSubmitBox {
 
 
 section form div input[type="submit"] {
-    padding: 2px 10px;
+    padding: 4px 12px;
     border-radius: 1rem;
     background-color: transparent;
-    box-shadow: none;
+    
     cursor: pointer;
     font-size: .8rem;
     text-transform: uppercase;
 
 }
 section form input[type="submit"]:hover {
-    background-color: #0fd6dd;
+    background-color: var(--primary-color);
     color: var(--white);
     transition: all .5s;
 }
@@ -353,7 +351,8 @@ footer > a {
 }
 
 footer > a:hover {
-    color: #75f9fd;
+    text-shadow: 0 0 2px;
+    transition: all .5s ease;
 }
 
 
