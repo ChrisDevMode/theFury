@@ -24,7 +24,6 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.5;
     box-sizing: border-box;
-
     background: var(--body-background);
 }
     
@@ -39,20 +38,7 @@ body {
 /* NAVEGACIONES ------------------------- */
 /* navegación del header */
 
-.navigation {
-    display: flex;
-    justify-content: center;
-}
-
-.navigation__main {
-    display: flex; 
-    gap: 2rem;
-} 
-
-.navigation__main ul {
-    display: flex;
-}
-
+/*  
 .navigation__main li {
     text-align: center;
     list-style: none;
@@ -82,7 +68,7 @@ body {
     align-self: center;
     gap: 2rem;
     margin-top: 2rem;
-
+    
     opacity: 0;
 }
 
@@ -97,6 +83,15 @@ body {
     color: var(--white);
     text-transform: uppercase;
     
+}
+*/
+
+.navigation__main li {
+    list-style-type: none;
+}
+
+.navigation__main li a {
+    text-decoration: none;
 }
 
 /* Navegación del footer */
