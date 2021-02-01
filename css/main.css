@@ -38,20 +38,26 @@ body {
 
 /* NAVEGACIONES ------------------------- */
 /* navegación del header */
+
 .navigation {
     display: flex;
-    justify-content: center;  
+    justify-content: center;
+}
+
+.navigation__main {
+    display: flex; 
+    gap: 2rem;
 } 
 
-
-.navigation ul {
+.navigation__main ul {
     display: flex;
-    gap: 6rem;
 }
 
-.navigation li {
+.navigation__main li {
+    text-align: center;
     list-style: none;
 }
+
 
 .navigation a {
     color: var(--white);
@@ -65,6 +71,33 @@ body {
     color: #0fd6dd;
 }
 
+.navigation__main li a:hover ~ .navigation__sub {
+    opacity: 1;
+    transition: all 1s;
+}
+
+.navigation__sub {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    gap: 2rem;
+    margin-top: 2rem;
+
+    opacity: 0;
+}
+
+.navigation__sub > li {
+    border-bottom: solid 2px var(--white);
+    display: block;
+    width: 20rem;
+    text-align: center;
+}
+
+.navigation__sub li {
+    color: var(--white);
+    text-transform: uppercase;
+    
+}
 
 /* Navegación del footer */
 
@@ -81,7 +114,7 @@ footer .navigation a:hover {
 
 /* HEADER ------------------------- */
 header {
-    background-image:   linear-gradient(#0fd6dd88, #b4fde7ab), url(/media/img/header-hero.jpg);
+    background-image:   linear-gradient(#0aa0a5a4, #b4fde7ab), url(/media/img/header-hero.jpg);
     display: flex;
     flex-direction: column;
     justify-content: center;
